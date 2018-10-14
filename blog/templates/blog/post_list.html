@@ -3,20 +3,14 @@
 		<title>Anouk's blog</title>
 	</head>
 <body>
-	<h1>A heading</h1>
-	<h2>A sub-heading</h2>
-	<h3>A sub-sub-heading</h3>
-	<p>Hi there! (This is a paragraph or text)</p>
-	<p>It works!</p>
-	<em>Emphasized text</em>
-	<strong>Bold tekst</strong>
-	<br>
 	<a href="https://djangogirls.org">Link to Django</a>
-	<ul><li>First item</li>
-		<li>Second item</li>
-		<li>Third item</li>
-		<li>etc.</li>
-	<div></div>	
+	
+{% for post in posts %}
+	<div>
+		<p>published: {{ post.published_date }}</p>
+		<h1><a href="">{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaksbr }}</p>
+	</div>	
+{% endfor %}
 </body>
 </html>
-
