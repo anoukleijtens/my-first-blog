@@ -1,1 +1,1 @@
-print("Hello, Django girls!")
+Django~=2.0.6
